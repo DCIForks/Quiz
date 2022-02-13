@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Quiz Step-by-Step
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this series of assignments, you will be creating a React quiz game app where:
 
-## Available Scripts
+* The player will be asked a series of multiple choice questions
+* When the player confirms their answer, the correct answer is shown
+* The answers are displayed in a random order
+* The player can choose how many questions to answer
+* The chosen number of questions are selected at random from a long list of questions
+* If the player decides to start a new quiz, questions that have already been seen will not be shown again until all questions have been seen.
 
-In the project directory, you can run:
+---
+## Step 1: Displaying questions and answers
 
-### `npm start`
+This repo contains an array of questions in the file `src/data/questions.json`. There are only three questions for now. There will be more later.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Each question has the form:
+```json
+{ "question": "The text of the question",
+  "answers": [
+    "The first answer is always correct",
+    "Other answers...",
+    "... are intended...",
+    "... as decoys"
+  ]
+}
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Your first task is to create a Question component which will display one question and its answers, along with a Next button.
 
-### `npm test`
+* The answers should be shown in the same order as they are given in the `questions.json` file
+* Clicking on the Next button should cycle through the questions in order.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Your app could look something like this when you have finished this step:
+<br />
+<br />
 
-### `npm run build`
+![Suggested layout of question](img/question.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## One Step at a Time
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+At this stage, just focus on the layout of each question and its answers. For now, you **don't** need to provide a way for the player to indicate the right answer or to show the score. You can deal with these and other issues at a later stage.
 
-### `npm run eject`
+## Tips
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. You can use `import questions from './data/questions'` to set a `questions` variable to the value of contents of the `questions.json` file.
+2. You can use `useState` to store the index of the current question
+3. You can use the `%` mod operator to set the index value back to 0 if you increment it to a value higher than the highest index in an array.
+4. You can create a `Questions` component in a separate file, and import it into your `App.js` file.
+5. You can send props to the `<Questions />` component, to define what question to show, what answers to show, and what function to call when the Next button is clicked.
+6. You can map the answers to `<li>` items inside a `<ul>` element
+7. You can use `index.css` to define the styles for the different HTML elements
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Potential Gotchas
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. The questions and answers are of different lengths. How can you set the CSS so that the text does not move around between one question and the next?
+2. Question 3 contains emoji characters. These may affect the line height of the displayed answers, which may make the layout shift slightly when the user moves to Question 3 and back to Question 1
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
