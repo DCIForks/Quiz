@@ -1,0 +1,25 @@
+[ {
+    "question": "Choose the right answer",
+    "answers": [
+      "This first answer is the only right answer",
+      "This is an ancient rite",
+      "A wright is a skilled maker of objects",
+      "You have forfeited the right to do this"
+  ] },
+  {
+    "question": "Which answer is the right one?",
+    "answers": [
+      "I am the one. Pick me! Pick me!",
+      "I was number two in the JSON file",
+      "We, the people, but three's a crowd",
+      "Four tunes favour the bold"
+  ]},
+  {
+    "question": "Choose the answer with the check mark",
+    "answers": [
+      "✓ Check!",
+      "♚♕♖ Checkmate!",
+      "× cross",
+      "⇨ right"
+  ]}
+]
