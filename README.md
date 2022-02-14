@@ -1,60 +1,38 @@
 # Quiz Step-by-Step
 
-## Step 1 Completed
+## Step 3 Completed
 
-Your first task was to create a Question component which will display one question and its answers, along with a Next button. In this branch, this has been done for you. As requested:
+Your third task was to confirm if the answer is correct before moving to the next question. In this branch, this has been done for you. As requested:
 
-* The answers are shown in the same order as they are given in the `questions.json` file
-* Clicking on the Next button cycles through the questions in order.
+* The Next button initially appears disabled
+* The button text changes to "Check Answer" when an answer is selected
+* When Check Answer is pressed:
+  - The correct answer is shown in green
+  - If the selected answer was wrong, it is shown in red
+  - The player cannot change the answer any more
+  - The button text reverts to "Next"
+* The state of the Question component reverts to defaults when Next is pressed 
 
-## Step 2: Provide visual feedback when an answer is selected
+## Step 4: Present the answers in a random order
 
-Your second task is to create an Answers component, where each answer is displayed as a radio button, so only one answer can be selected at a time.
+Currently, the answers are all shown in the order in which they appear in the `questions.json` file. This file uses the convention that the right answer always appears first.
 
-* Create an Answers component
-* Send the `answers` data for the current question as `props` to the Answers component
-* Display each question as the label for a radio button
-* Present these elements in list items in an unordered list
-* Use CSS to hide the radio button itself
-* Use CSS to make the selected answer change its look when pressed
+Your fourth task is to show the answers in a random order.
 
-![Suggested layout of question](img/answers.png)
+![The Check Answer button](img/checkAnswer.png)
+*<p align="center">The Check Answer button</p>*
 
 ---
 
 ## One Step at a Time
 
-At this stage, just focus on the visual feedback when the player selects an answer. For now, you don't need show whether the selected answer is correct or not. You can deal with these and other issues at a later stage.
+At this stage, just focus on randomizing the order of the answers. For now, it's enough to test with the same three placeholder questions. You can add more questions and deal with other issues at a later stage.
 
 ## Tips
 
-1. You can create a list item with the format:
+1. 
 
-```html
-<li>
-  <input type="radio" name="answer" id="unique-id" .../>
-  <label htmlFor="unique-id"...>
-    Answer text goes here
-  </label>
-</li>
-```
-   You can then use the `+` "next sibling" selector to change the style of the label when its associated radio button is pressed:
-
-```css
-input[type="radio"] + label {
-  /* Style for selected answer */
-}
-```
-2. You can set the width of the radio button and its opacity to 0 to hide it.
-3. It would be possible to create the same feature without using radio buttons, but it would require more work.
 
 ## Potential Gotchas
 
-1. React will complain if the `<li>` answer items don't each have their own unique `key`. React uses the `key` to recognize an element that is queued for re-rendering is already showing, in which case, it can take shortcuts.
-
-   So what happens if you use a key like `"answer" + index`, where `index` is the index of the list item? Try it and see. Click on an answer and then click on your Next button.
-
-   If the same `key` is used for a list item in the same list, React might think that it is the _same_ list item, even if its text has changed.
-
-   You could use the text of the answer itself, or a custom key like `"QxAy"` where `x` is the question number and `y` is the answer index. (How would you pass the question number to the Answers component?)
-
+1. 
