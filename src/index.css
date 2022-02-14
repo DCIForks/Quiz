@@ -37,6 +37,11 @@ label {
   border: 1px outset #ccc;
   border-radius: 1em;
   padding: 0.25em;
+  text-align: center;
+  color: #ccc;
+}
+
+#answers label {
   width: 23em;
   text-align: center;
   color: #ccc;
@@ -73,10 +78,24 @@ input[type="radio"] + label.wrong {
   pointer-events: none;
 }
 
+#number-of-questions.disabled {
+  opacity: 0.25;
+}
+
 button {
   width: 8em;
 }
 
 button:disabled {
   color: #ccc
+}
+
+p {
+  height: 4em;
+}
+
+#number-of-questions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
 }

@@ -1,25 +1,241 @@
-[ {
-    "question": "Choose the right answer",
+[ { "question": "In which continent are Chile, Argentina and Brazil?",
     "answers": [
-      "This first answer is the only right answer",
-      "This is an ancient rite",
-      "A wright is a skilled maker of objects",
-      "You have forfeited the right to do this"
-  ] },
-  {
-    "question": "Which answer is the right one?",
+    "South America",
+    "North America",
+    "Europe",
+    "Australasia"
+  ]
+  },
+  { "question": "Which brand of soup featured in one of Andy Warhol’s most famous pop art pieces?",
     "answers": [
-      "I am the one. Pick me! Pick me!",
-      "I was number two in the JSON file",
-      "We, the people, but three's a crowd",
-      "Four tunes favour the bold"
-  ]},
-  {
-    "question": "Choose the answer with the check mark",
+    "Campbell’s",
+    "Heinz",
+    "Baxters",
+    "Knorr"
+  ]
+  },
+  { "question": "The Mad Hatter and the Cheshire Cat are characters in which famous book?",
     "answers": [
-      "✓ Check!",
-      "♚♕♖ Checkmate!",
-      "× cross",
-      "⇨ right"
-  ]}
+    "Alice in Wonderland",
+    "Winne-the-Pooh",
+    "Charlotte's Web",
+    "Charlie and the Chocolate Factory"
+  ]
+  },
+  { "question": "What measurement scale is used to determine wind speed?",
+    "answers": [
+    "Beaufort scale",
+    "Richter scale",
+    "Synoptic scale",
+    "Gusting scale"
+  ]
+  },
+  { "question": "In which city were the 1992 Summer Olympics held?",
+    "answers": [
+    "Barcelona",
+    "Atlanta",
+    "Sydney",
+    "Seoul"
+  ]
+  },
+  { "question": "On March 13, 2000, which country adopted the US dollar as its official currency?",
+    "answers": [
+    "Ecuador",
+    "Canada",
+    "Mexico",
+    "United Kingdom"
+  ]
+  },
+  { "question": "How many faces does a Dodecahedron have?",
+    "answers": [
+    "12",
+    "24",
+    "14",
+    "20"
+  ]
+  },
+  { "question": "The Statue of Liberty was a gift to the United States from which European country?",
+    "answers": [
+    "France",
+    "Belgium",
+    "Germany",
+    "Spain"
+  ]
+  },
+  { "question": "Which traditional Spanish dance originated in Andalusia and is recognised by UNESCO as a heritage of humanity?",
+    "answers": [
+    "Flamenco",
+    "Sardana",
+    "Tango",
+    "Paso Doble"
+  ]
+  },
+  { "question": "The human body is made up of approximately how much water?",
+    "answers": [
+    "60%",
+    "40%",
+    "50%",
+    "70%"
+  ]
+  },
+  { "question": "What is the world’s fastest species of bird?",
+    "answers": [
+    "Peregrine falcon",
+    "Golden eagle",
+    "Frigatebird",
+    "Penguin"
+  ]
+  },
+  { "question": "Which artist famously cut off his own ear?",
+    "answers": [
+    "Vincent Van Gogh",
+    "Claude Monet",
+    "Salvador Dali",
+    "Pablo Picasso"
+  ]
+  },
+  { "question": "Which female holds the most Wimbledon titles?",
+    "answers": [
+    "Martina Navratilova",
+    "Serena Williams",
+    "Venus Williams",
+    "Martina Hingis"
+  ]
+  },
+  { "question": "Which composer scored 2000s classics such as Gladiator, Hannibal, Madagascar and Black Hawk Down?",
+    "answers": [
+    "Hans Zimmer",
+    "John Williams",
+    "Danny Elfman",
+    "James Horner"
+  ]
+  },
+  { "question": "Which Danish-Norwegian band released the hit song ‘Barbie Girl’ in 1997?",
+    "answers": [
+    "Aqua",
+    "ABBA",
+    "Vanilla Ice",
+    "Bjork "
+  ]
+  },
+  { "question": "What was the fastest growing web browser in 2020?",
+    "answers": [
+      "Microsoft Edge",
+      "Firefox",
+      "DuckDuckGo",
+      "Internet Explorer"
+    ]
+  },
+  { "question": "Which University offered the first-ever academic programme in Computer Science?",
+    "answers": [
+      "Cambridge University",
+      "Harvard University",
+      "MIT",
+      "University of Glasgow"
+    ]
+  },
+  { "question": "How much did Steve Job’s first computer go for at auction?",
+    "answers": [
+      "$500,000",
+      "$1.2 million",
+      "$223,000",
+      "$3.4 million"
+    ]
+  },
+  { "question": "Which model of computer is the best selling of all time?",
+    "answers": [
+      "Commodore 64",
+      "Apple II",
+      "IBM PC (5150)",
+      "Sinclair ZX Spectrum"
+    ]
+  },
+  { "question": "What year was the oldest programming language still in use invented?",
+    "answers": [
+      "1957",
+      "1952",
+      "1960",
+      "1974"
+    ]
+  },
+  { "question": "What was the name of the first operating system?",
+    "answers": [
+      "GM-NAA I/O",
+      "Windows 1.01",
+      "TSS/360",
+      "EPOC"
+    ]
+  },
+  { "question": "Where was the world wide web invented?",
+    "answers": [
+      "Switzerland",
+      "United States",
+      "Germany",
+      "United Kingdom"
+    ]
+  },
+  { "question": "Which institution is credited with creating the first website?",
+    "answers": [
+      "CERN",
+      "United Nations",
+      "NASA",
+      "NATO"
+    ]
+  },
+  { "question": "When did the first virtual event take place?",
+    "answers": [
+      "1993",
+      "1990",
+      "1989",
+      "1995"
+    ]
+  },
+  { "question": "When was the first email sent?",
+    "answers": [
+      "1971",
+      "1974",
+      "1977",
+      "1981"
+    ]
+  },
+  { "question": "What was the first item sold on Ebay in 1995?",
+    "answers": [
+      "A broken laser pointer",
+      "A rusty bucket",
+      "A computer mouse",
+      "A Jurassic Park T-shirt"
+    ]
+  },
+  { "question": "What search engine did Google beat in 2004 in order to become the most successful search engine?",
+    "answers": [
+      "Yahoo!",
+      "MSN",
+      "AskJeeves",
+      "Netscape"
+    ]
+  },
+  { "question": "What was the first mobile phone with internet connectivity?",
+    "answers": [
+      "Nokia 9000 Communicator",
+      "iPhone",
+      "Motorola 7500",
+      "Blackberry 850"
+    ]
+  },
+  { "question": "What is the name of the oldest programming language still in use?",
+    "answers": [
+      "FORTRAN",
+      "Matlab",
+      "Ada",
+      "COBOL"
+    ]
+  },
+  { "question": "What year did Apple launch the Macintosh 128K?",
+    "answers": [
+      "1983",
+      "1985",
+      "1977",
+      "1999"
+    ]
+  }
 ]
