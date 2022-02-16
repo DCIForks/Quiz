@@ -1,7 +1,7 @@
 const Answers = (props) => {
   const { 
     question, // integer number of the current question
-    answers,  // an array of strings
+    answers,  // an array of { answer: <String>, correct: <Boolean> }
     select,   // a function to call when an answer is pressed
     selected  // the text of the selected answer after Check Answer
   } = props
@@ -16,13 +16,13 @@ const Answers = (props) => {
 
 
 
-  const answerItems = answers.map(( answer, index ) => {
+  const answerItems = answers.map(( answerData, index ) => {
+    const { answer, correct } = answerData
     const id = `q${question}a${index}`
-
 
     let answerClass // may be undefined, "right" or "wrong"
     if (selected) { // the player clicked Check Answer
-      if (!index) { // for now, the first answer is always right
+      if (correct) { // correct answer may be in any position
         answerClass = "right"
       } else if (selected === answer) {
         answerClass = "wrong"

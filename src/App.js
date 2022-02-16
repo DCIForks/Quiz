@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import Question from './components/Question';
 import questions from './data/questions'
+import { shuffle } from './tools/utilities'
 
 
 
 function App() {
   const [ qIndex, setQIndex ] = useState(0)
-  const question = questions[qIndex]
+  let { question, answers } = questions[qIndex]
   // { question: <String>, answers: <String[]> }
 
 
@@ -15,11 +16,18 @@ function App() {
     setQIndex(index)
   }
 
+
+  answers = answers.map(( answer, index ) => (
+    { answer, correct: !index }
+  ))
+  shuffle(answers)
+
   
   return (
     <Question
       index={qIndex + 1}
-      {...question}
+      question={question}
+      answers={answers}
       goNext={goNext}
     />
   );
