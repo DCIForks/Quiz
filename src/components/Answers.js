@@ -40,7 +40,7 @@ const Answers = (props) => {
           id={id}
           type="radio"
           name="answer"
-          onChange={() => select(answer)}
+          onChange={() => select(answer, !correct)}
         />
         <label
           htmlFor={id}

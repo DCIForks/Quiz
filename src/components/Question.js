@@ -3,23 +3,29 @@ import Answers from './Answers'
 
 
 const Question = (props) => {
-  const { index, question, answers, goNext } = props
+  const { index, question, answers, updateScore, goNext } = props
 
   // selected will become the string text of the selected answer
   const [ selected, setSelected ] = useState()
   // checked will become true when Check Answer is pressed
   const [ checked, setChecked ] = useState(false)
+  //
+  const [ isWrong, setWrong ] = useState(false)
 
 
   // Event listenen to forward to Answer items
-  const selectAnswer = (answer) => {
+  const selectAnswer = (answer, wrong) => {
+    setWrong(wrong)
     setSelected(answer)
   }
+
 
   // Event listener for Check Answer button
   const checkAnswer = () => {
     setChecked(true)
+    updateScore(isWrong)
   }
+
 
   // checked needs to be set back to its default value before
   // showing the next question. If not, the next question will
@@ -33,6 +39,7 @@ const Question = (props) => {
     goNext()
   }
 
+  
   // Show the Next button disabled when a question is first shown
   // Show Check Answer after an answer has been selected
   // Enable the Next button after Check Answer has been pressed

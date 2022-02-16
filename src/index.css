@@ -15,11 +15,16 @@ body {
   align-items: center;
 }
 
-#question {
-  border: 1px solid #fff;
+#question,
+#score {
+  position: relative;
   border-radius: 1em;
   width: 25em;
-  padding: 1em
+  padding: 0 1em
+}
+
+#question {
+  border: 1px solid #fff;
 }
 
 ul {
@@ -83,7 +88,7 @@ input[type="radio"] + label.wrong {
 }
 
 button {
-  width: 8em;
+  width: 12em;
 }
 
 button:disabled {
@@ -98,4 +103,38 @@ p {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1em;
+}
+
+#score {
+  --barHeight: 0.5em;
+}
+
+#final-score h1,
+#final-score p {
+    margin: 0.1em 0;
+    height: auto;
+    text-align: center;
+}
+
+/* Ensure the whole quiz remains visible even on small screens */
+@media (max-width: 430px) {
+  :root {
+    font-size: 3.6vw;
+  }
+
+  select,
+  button {
+    font-size: inherit;
+  }
+}
+
+@media (max-height: 345px) {
+  :root {
+    font-size: 4.5vh;
+  }
+
+  select,
+  button {
+    font-size: inherit;
+  }
 }
